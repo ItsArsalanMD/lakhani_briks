@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Lakhani Brick Store</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-roboto">
+
+     <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-primary font-playfair">Lakhani Brick Store</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="products.html"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium">Products</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary transition-colors font-medium">About</a>
+                    <a href="gallery.html"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium">Gallery</a>
+                    <a href="about.html#contact"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium">Contact</a>
+                    <a href="about.html#contact"
+                        class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition-colors font-medium whitespace-nowrap">Get
+                        Quote</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary">
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="ri-menu-line ri-lg"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="products.html" class="block py-2 text-gray-700 hover:text-primary">Products</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="gallery.html" class="block py-2 text-gray-700 hover:text-primary">Gallery</a>
+                <a href="about.html#contact" class="block py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Gallery Page Content -->
+    <div class="pt-16">
+
+        <!-- Banner Section -->
+        <section class="relative h-[400px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 w-full h-full">
+                <div class="w-full h-full bg-cover bg-center"
+                    style="background-image: url('https://readdy.ai/api/search-image?query=premium%20quality%20bricks%20arranged%20in%20professional%20display%20with%20dramatic%20lighting%2C%20architectural%20background%2C%20construction%20materials%20showcase%2C%20clean%20modern%20presentation%20with%20warm%20tones%2C%20professional%20product%20photography&width=1920&height=800&seq=product-banner&orientation=landscape')">
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            </div>
+            <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+                <h1 class="text-5xl md:text-6xl font-bold font-playfair mb-6">Our Products</h1>
+                <p class="text-xl md:text-2xl font-light">Discover our comprehensive range of premium construction
+                    materials</p>
+            </div>
+        </section>
+
+        <!-- Product Categories -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Extruded Bricks -->
+                <div class="mb-20 scroll-fade">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 lg:order-1">
+                            <h2 class="text-3xl md:text-4xl font-bold font-playfair text-gray-900 mb-6">Extruded Bricks
+                            </h2>
+                            <div class="w-16 h-1 bg-primary mb-6"></div>
+                            <p class="text-lg text-gray-600 mb-8">Our premium extruded bricks are manufactured using
+                                advanced technology and superior clay materials, ensuring exceptional durability and
+                                consistent quality for all construction needs.</p>
+                            <div class="grid grid-cols-2 gap-6 mb-8">
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mr-4">
+                                        <i class="ri-shield-check-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 mb-1">High Strength</h4>
+                                        <p class="text-sm text-gray-600">Superior compression strength</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mr-4">
+                                        <i class="ri-drop-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 mb-1">Water Resistant</h4>
+                                        <p class="text-sm text-gray-600">Low water absorption rate</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mr-4">
+                                        <i class="ri-ruler-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 mb-1">Uniform Size</h4>
+                                        <p class="text-sm text-gray-600">Precise dimensions</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mr-4">
+                                        <i class="ri-fire-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 mb-1">Fire Resistant</h4>
+                                        <p class="text-sm text-gray-600">High temperature tolerance</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-4 mb-8">
+                                <h3 class="text-xl font-semibold font-montserrat text-gray-900">Technical Specifications
+                                </h3>
+                                <div class="grid grid-cols-2 gap-4 text-sm">
+                                    <div class="flex justify-between py-2 border-b border-gray-200">
+                                        <span class="text-gray-600">Size</span>
+                                        <span class="font-medium text-gray-900">230 x 110 x 75mm</span>
+                                    </div>
+                                    <div class="flex justify-between py-2 border-b border-gray-200">
+                                        <span class="text-gray-600">Weight</span>
+                                        <span class="font-medium text-gray-900">2.8 - 3.2 kg</span>
+                                    </div>
+                                    <div class="flex justify-between py-2 border-b border-gray-200">
+                                        <span class="text-gray-600">Strength</span>
+                                        <span class="font-medium text-gray-900">≥ 10 N/mm²</span>
+                                    </div>
+                                    <div class="flex justify-between py-2 border-b border-gray-200">
+                                        <span class="text-gray-600">Water Absorption</span>
+                                        <span class="font-medium text-gray-900">
+                                            < 15%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-secondary transition-colors font-medium whitespace-nowrap">Request
+                                Quote</button>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <div class="relative h-[400px] rounded-lg overflow-hidden">
+                                <img src="https://readdy.ai/api/search-image?query=stack%20of%20premium%20red%20extruded%20bricks%20with%20perfect%20edges%20and%20corners%2C%20professional%20product%20photography%20on%20white%20background%2C%20showing%20texture%20and%20quality%2C%20construction%20material%20display&width=800&height=800&seq=extruded-detail&orientation=squarish"
+                                    alt="Extruded Bricks" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pressed Bricks -->
+                <div class="mb-20 scroll-fade">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <div class="relative h-[400px] rounded-lg overflow-hidden">
+                                <img src="https://readdy.ai/api/search-image?query=elegant%20pressed%20clay%20bricks%20with%20smooth%20finish%20and%20sharp%20edges%2C%20professional%20product%20photography%20on%20white%20background%2C%20showing%20premium%20quality%20and%20craftsmanship%2C%20construction%20material%20showcase&width=800&height=800&seq=pressed-detail&orientation=squarish"
+                                    alt="Pressed Bricks" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-bold font-playfair text-gray-900 mb-6">Pressed Bricks
+                            </h2>
+                            <div class="w-16 h-1 bg-primary mb-6"></div>
+                            <p class="text-lg text-gray-600 mb-8">Our pressed bricks are crafted through a precision
+                                manufacturing process, delivering exceptional strength and aesthetic appeal for both
+                                structural and decorative applications.</p>
+                            <div class="grid grid-cols-2 gap-6 mb-8">
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mr-4">
+                                        <i class="ri-contrast-2-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 mb-1">Smooth Finish</h4>
+                                        <p class="text-sm text-gray-600">Premium surface quality</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mr-4">
+                                        <i class="ri-paint-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 mb-1">Color Variety</h4>
+                                        <p class="text-sm text-gray-600">Multiple color options</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mr-4">
+                                        <i class="ri-shape-2-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 mb-1">Sharp Edges</h4>
+                                        <p class="text-sm text-gray-600">Precise corners</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mr-4">
+                                        <i class="ri-stack-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 mb-1">Dense Structure</h4>
+                                        <p class="text-sm text-gray-600">Low porosity</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-4 mb-8">
+                                <h3 class="text-xl font-semibold font-montserrat text-gray-900">Technical Specifications
+                                </h3>
+                                <div class="grid grid-cols-2 gap-4 text-sm">
+                                    <div class="flex justify-between py-2 border-b border-gray-200">
+                                        <span class="text-gray-600">Size</span>
+                                        <span class="font-medium text-gray-900">220 x 105 x 70mm</span>
+                                    </div>
+                                    <div class="flex justify-between py-2 border-b border-gray-200">
+                                        <span class="text-gray-600">Weight</span>
+                                        <span class="font-medium text-gray-900">2.5 - 2.8 kg</span>
+                                    </div>
+                                    <div class="flex justify-between py-2 border-b border-gray-200">
+                                        <span class="text-gray-600">Strength</span>
+                                        <span class="font-medium text-gray-900">≥ 12 N/mm²</span>
+                                    </div>
+                                    <div class="flex justify-between py-2 border-b border-gray-200">
+                                        <span class="text-gray-600">Water Absorption</span>
+                                        <span class="font-medium text-gray-900">
+                                            < 12%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-secondary transition-colors font-medium whitespace-nowrap">Request
+                                Quote</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Comparison -->
+                <!-- <div class="mb-20 scroll-fade">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold font-playfair text-gray-900 mb-4">Product Comparison
+                        </h2>
+                        <p class="text-lg text-gray-600">Compare our products to find the perfect match for your project
+                        </p>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full min-w-[800px]">
+                            <thead>
+                                <tr class="border-b-2 border-gray-200">
+                                    <th class="py-4 px-6 text-left text-gray-600">Features</th>
+                                    <th class="py-4 px-6 text-center text-gray-900 font-semibold">Extruded Bricks</th>
+                                    <th class="py-4 px-6 text-center text-gray-900 font-semibold">Pressed Bricks</th>
+                                    <th class="py-4 px-6 text-center text-gray-900 font-semibold">Cladding Tiles</th>
+                                    <th class="py-4 px-6 text-center text-gray-900 font-semibold">Pavers</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-4 px-6 text-gray-600">Compressive Strength</td>
+                                    <td class="py-4 px-6 text-center">★★★★☆</td>
+                                    <td class="py-4 px-6 text-center">★★★★★</td>
+                                    <td class="py-4 px-6 text-center">★★★☆☆</td>
+                                    <td class="py-4 px-6 text-center">★★★★★</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-4 px-6 text-gray-600">Water Resistance</td>
+                                    <td class="py-4 px-6 text-center">★★★★☆</td>
+                                    <td class="py-4 px-6 text-center">★★★★★</td>
+                                    <td class="py-4 px-6 text-center">★★★★★</td>
+                                    <td class="py-4 px-6 text-center">★★★★★</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-4 px-6 text-gray-600">Aesthetic Appeal</td>
+                                    <td class="py-4 px-6 text-center">★★★★☆</td>
+                                    <td class="py-4 px-6 text-center">★★★★★</td>
+                                    <td class="py-4 px-6 text-center">★★★★★</td>
+                                    <td class="py-4 px-6 text-center">★★★★☆</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-4 px-6 text-gray-600">Cost Effectiveness</td>
+                                    <td class="py-4 px-6 text-center">★★★★★</td>
+                                    <td class="py-4 px-6 text-center">★★★★☆</td>
+                                    <td class="py-4 px-6 text-center">★★★☆☆</td>
+                                    <td class="py-4 px-6 text-center">★★★★☆</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-4 px-6 text-gray-600">Durability</td>
+                                    <td class="py-4 px-6 text-center">★★★★★</td>
+                                    <td class="py-4 px-6 text-center">★★★★★</td>
+                                    <td class="py-4 px-6 text-center">★★★★☆</td>
+                                    <td class="py-4 px-6 text-center">★★★★★</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div> -->
+                <!-- Request Quote Form -->
+                <div class="scroll-fade">
+                    <div class="bg-gray-50 rounded-lg p-8 md:p-12">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl md:text-4xl font-bold font-playfair text-gray-900 mb-4">Request a Quote
+                            </h2>
+                            <p class="text-lg text-gray-600">Fill out the form below and our team will get back to you
+                                with pricing details</p>
+                        </div>
+                        <form class="max-w-3xl mx-auto">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                    <input type="text"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                        placeholder="Enter your full name">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+                                    <input type="text"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                        placeholder="Enter company name">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                    <input type="email"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                        placeholder="Enter your email">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                    <input type="tel"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                        placeholder="Enter your phone number">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Product Interest</label>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                    <label
+                                        class="flex items-center space-x-3 p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
+                                        <input type="checkbox" class="form-checkbox text-primary">
+                                        <span class="text-sm text-gray-900">Extruded Bricks</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center space-x-3 p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
+                                        <input type="checkbox" class="form-checkbox text-primary">
+                                        <span class="text-sm text-gray-900">Pressed Bricks</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center space-x-3 p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
+                                        <input type="checkbox" class="form-checkbox text-primary">
+                                        <span class="text-sm text-gray-900">Cladding Tiles</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center space-x-3 p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
+                                        <input type="checkbox" class="form-checkbox text-primary">
+                                        <span class="text-sm text-gray-900">Pavers</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Quantity Required</label>
+                                <input type="number"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="Enter quantity in pieces">
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Additional
+                                    Requirements</label>
+                                <textarea rows="4"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="Enter any specific requirements or questions"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-primary text-white py-4 !rounded-button hover:bg-secondary transition-colors font-medium">Submit
+                                Quote Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold font-playfair text-primary mb-4">Lakhani Brick Store</h3>
+                    <p class="text-gray-300 mb-6">Building dreams with premium quality bricks and construction materials
+                        for over three decades.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold font-montserrat mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#products" class="text-gray-300 hover:text-primary transition-colors">Products</a>
+                        </li>
+                        <li><a href="#about" class="text-gray-300 hover:text-primary transition-colors">About Us</a>
+                        </li>
+                        <li><a href="#gallery" class="text-gray-300 hover:text-primary transition-colors">Gallery</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-primary transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold font-montserrat mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Extruded Bricks</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Pressed Bricks</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Cladding Tiles</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Pavers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Custom Solutions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold font-montserrat mb-4">Contact Info</h4>
+                    <div class="space-y-3">
+                        <p class="text-gray-300 flex items-center">
+                        <div class="w-5 h-5 flex items-center justify-center mr-3">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+                        123 Brick Lane, Mumbai
+                        </p>
+                        <p class="text-gray-300 flex items-center">
+                        <div class="w-5 h-5 flex items-center justify-center mr-3">
+                            <i class="ri-phone-line"></i>
+                        </div>
+                        +91 98765 43210
+                        </p>
+                        <p class="text-gray-300 flex items-center">
+                        <div class="w-5 h-5 flex items-center justify-center mr-3">
+                            <i class="ri-mail-line"></i>
+                        </div>
+                        info@lakhanibricks.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2024 Lakhani Brick Store. All rights reserved. | Designed with passion
+                    for quality construction.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210"
+        class="floating-whatsapp bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors">
+        <div class="w-8 h-8 flex items-center justify-center">
+            <i class="ri-whatsapp-fill ri-xl"></i>
+        </div>
+    </a>
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-20 right-4 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-secondary transition-colors opacity-0 pointer-events-none">
+        <div class="w-6 h-6 flex items-center justify-center">
+            <i class="ri-arrow-up-line"></i>
+        </div>
+    </button>
+</body>
+
+</html>

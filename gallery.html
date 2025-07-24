@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Lakhani Brick Store</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-roboto">
+
+     <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-primary font-playfair">Lakhani Brick Store</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="products.html"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium">Products</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary transition-colors font-medium">About</a>
+                    <a href="gallery.html"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium">Gallery</a>
+                    <a href="about.html#contact"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium">Contact</a>
+                    <a href="about.html#contact"
+                        class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition-colors font-medium whitespace-nowrap">Get
+                        Quote</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary">
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="ri-menu-line ri-lg"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="products.html" class="block py-2 text-gray-700 hover:text-primary">Products</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="gallery.html" class="block py-2 text-gray-700 hover:text-primary">Gallery</a>
+                <a href="about.html#contact" class="block py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Gallery Page Content -->
+    <div class="pt-16">
+        <!-- Banner Section -->
+        <section class="relative h-[400px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 w-full h-full">
+                <div class="w-full h-full bg-cover bg-center"
+                    style="background-image: url('https://readdy.ai/api/search-image?query=elegant%20display%20of%20various%20brick%20types%20and%20patterns%2C%20architectural%20photography%20with%20dramatic%20lighting%2C%20premium%20construction%20materials%20showcase%2C%20professional%20studio%20setup%20with%20warm%20tones&width=1920&height=800&seq=gallery-banner&orientation=landscape')">
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            </div>
+            <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+                <h1 class="text-5xl md:text-6xl font-bold font-playfair mb-6">Project Gallery</h1>
+                <p class="text-xl md:text-2xl font-light">Showcasing our finest work and premium products</p>
+            </div>
+        </section>
+
+        <!-- Gallery Filter Section -->
+        <section class="py-12 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button
+                        class="filter-btn active px-6 py-2 !rounded-button bg-primary text-white hover:bg-secondary transition-colors whitespace-nowrap"
+                        data-filter="all">All Projects</button>
+                    <button
+                        class="filter-btn px-6 py-2 !rounded-button bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors whitespace-nowrap"
+                        data-filter="residential">Residential</button>
+                    <button
+                        class="filter-btn px-6 py-2 !rounded-button bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors whitespace-nowrap"
+                        data-filter="commercial">Commercial</button>
+                    <button
+                        class="filter-btn px-6 py-2 !rounded-button bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors whitespace-nowrap"
+                        data-filter="industrial">Industrial</button>
+                    <button
+                        class="filter-btn px-6 py-2 !rounded-button bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors whitespace-nowrap"
+                        data-filter="institutional">Institutional</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Residential Projects -->
+                    <div class="gallery-item residential scroll-fade">
+                        <div class="group cursor-pointer">
+                            <div class="relative overflow-hidden rounded-lg">
+                                <img src="https://readdy.ai/api/search-image?query=modern%20luxury%20house%20with%20red%20brick%20exterior%2C%20contemporary%20residential%20architecture%2C%20landscaped%20garden%2C%20twilight%20photography%2C%20premium%20construction%20showcase&width=600&height=400&seq=residential-1&orientation=landscape"
+                                    alt="Modern Residence"
+                                    class="w-full h-64 object-cover transition-transform group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity flex items-center justify-center">
+                                    <div
+                                        class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity p-6">
+                                        <h3 class="text-xl font-semibold mb-2">Modern Family Residence</h3>
+                                        <p class="text-sm mb-4">Premium extruded bricks with contemporary design</p>
+                                        <button
+                                            class="bg-white text-primary px-4 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">View
+                                            Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item residential scroll-fade">
+                        <div class="group cursor-pointer">
+                            <div class="relative overflow-hidden rounded-lg">
+                                <img src="https://readdy.ai/api/search-image?query=elegant%20villa%20with%20brick%20facade%20and%20columns%2C%20luxury%20residential%20architecture%2C%20manicured%20gardens%2C%20golden%20hour%20photography%2C%20high-end%20construction&width=600&height=400&seq=residential-2&orientation=landscape"
+                                    alt="Luxury Villa"
+                                    class="w-full h-64 object-cover transition-transform group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity flex items-center justify-center">
+                                    <div
+                                        class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity p-6">
+                                        <h3 class="text-xl font-semibold mb-2">Luxury Villa Project</h3>
+                                        <p class="text-sm mb-4">Custom pressed bricks with classical elements</p>
+                                        <button
+                                            class="bg-white text-primary px-4 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">View
+                                            Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Commercial Projects -->
+                    <div class="gallery-item commercial scroll-fade">
+                        <div class="group cursor-pointer">
+                            <div class="relative overflow-hidden rounded-lg">
+                                <img src="https://readdy.ai/api/search-image?query=modern%20office%20building%20with%20brick%20and%20glass%20facade%2C%20corporate%20architecture%2C%20urban%20setting%2C%20professional%20architectural%20photography%2C%20premium%20materials&width=600&height=400&seq=commercial-1&orientation=landscape"
+                                    alt="Corporate Office"
+                                    class="w-full h-64 object-cover transition-transform group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity flex items-center justify-center">
+                                    <div
+                                        class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity p-6">
+                                        <h3 class="text-xl font-semibold mb-2">Corporate Headquarters</h3>
+                                        <p class="text-sm mb-4">Innovative cladding solution for modern office</p>
+                                        <button
+                                            class="bg-white text-primary px-4 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">View
+                                            Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item commercial scroll-fade">
+                        <div class="group cursor-pointer">
+                            <div class="relative overflow-hidden rounded-lg">
+                                <img src="https://readdy.ai/api/search-image?query=retail%20complex%20with%20decorative%20brick%20patterns%2C%20shopping%20center%20architecture%2C%20evening%20lighting%2C%20commercial%20building%20photography%2C%20modern%20design&width=600&height=400&seq=commercial-2&orientation=landscape"
+                                    alt="Shopping Complex"
+                                    class="w-full h-64 object-cover transition-transform group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity flex items-center justify-center">
+                                    <div
+                                        class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity p-6">
+                                        <h3 class="text-xl font-semibold mb-2">Retail Complex</h3>
+                                        <p class="text-sm mb-4">Decorative brick patterns for retail spaces</p>
+                                        <button
+                                            class="bg-white text-primary px-4 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">View
+                                            Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Industrial Projects -->
+                    <div class="gallery-item industrial scroll-fade">
+                        <div class="group cursor-pointer">
+                            <div class="relative overflow-hidden rounded-lg">
+                                <img src="https://readdy.ai/api/search-image?query=modern%20industrial%20warehouse%20with%20brick%20walls%2C%20logistics%20facility%2C%20industrial%20architecture%2C%20professional%20photography%2C%20functional%20design&width=600&height=400&seq=industrial-1&orientation=landscape"
+                                    alt="Industrial Warehouse"
+                                    class="w-full h-64 object-cover transition-transform group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity flex items-center justify-center">
+                                    <div
+                                        class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity p-6">
+                                        <h3 class="text-xl font-semibold mb-2">Logistics Center</h3>
+                                        <p class="text-sm mb-4">Heavy-duty brick construction for industrial use</p>
+                                        <button
+                                            class="bg-white text-primary px-4 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">View
+                                            Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Institutional Projects -->
+                    <div class="gallery-item institutional scroll-fade">
+                        <div class="group cursor-pointer">
+                            <div class="relative overflow-hidden rounded-lg">
+                                <img src="https://readdy.ai/api/search-image?query=university%20building%20with%20traditional%20brick%20architecture%2C%20academic%20campus%2C%20landscaped%20surroundings%2C%20institutional%20photography%2C%20classical%20design&width=600&height=400&seq=institutional-1&orientation=landscape"
+                                    alt="University Building"
+                                    class="w-full h-64 object-cover transition-transform group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity flex items-center justify-center">
+                                    <div
+                                        class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity p-6">
+                                        <h3 class="text-xl font-semibold mb-2">University Campus</h3>
+                                        <p class="text-sm mb-4">Traditional brick architecture for education</p>
+                                        <button
+                                            class="bg-white text-primary px-4 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">View
+                                            Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold font-playfair text-primary mb-4">Lakhani Brick Store</h3>
+                    <p class="text-gray-300 mb-6">Building dreams with premium quality bricks and construction materials
+                        for over three decades.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold font-montserrat mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#products" class="text-gray-300 hover:text-primary transition-colors">Products</a>
+                        </li>
+                        <li><a href="#about" class="text-gray-300 hover:text-primary transition-colors">About Us</a>
+                        </li>
+                        <li><a href="#gallery" class="text-gray-300 hover:text-primary transition-colors">Gallery</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-primary transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold font-montserrat mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Extruded Bricks</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Pressed Bricks</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Cladding Tiles</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Pavers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Custom Solutions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold font-montserrat mb-4">Contact Info</h4>
+                    <div class="space-y-3">
+                        <p class="text-gray-300 flex items-center">
+                        <div class="w-5 h-5 flex items-center justify-center mr-3">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+                        123 Brick Lane, Mumbai
+                        </p>
+                        <p class="text-gray-300 flex items-center">
+                        <div class="w-5 h-5 flex items-center justify-center mr-3">
+                            <i class="ri-phone-line"></i>
+                        </div>
+                        +91 98765 43210
+                        </p>
+                        <p class="text-gray-300 flex items-center">
+                        <div class="w-5 h-5 flex items-center justify-center mr-3">
+                            <i class="ri-mail-line"></i>
+                        </div>
+                        info@lakhanibricks.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2024 Lakhani Brick Store. All rights reserved. | Designed with passion
+                    for quality construction.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210"
+        class="floating-whatsapp bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors">
+        <div class="w-8 h-8 flex items-center justify-center">
+            <i class="ri-whatsapp-fill ri-xl"></i>
+        </div>
+    </a>
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-20 right-4 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-secondary transition-colors opacity-0 pointer-events-none">
+        <div class="w-6 h-6 flex items-center justify-center">
+            <i class="ri-arrow-up-line"></i>
+        </div>
+    </button>
+</body>
+
+</html>
