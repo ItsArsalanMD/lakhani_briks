@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Lakhani Brick Store</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-roboto">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <!-- <h1 class="text-2xl font-bold text-primary font-playfair">Lakhani Brick Store</h1> -->
+                    <img src="logo-01.jpg" class="h-16 w-auto" alt="logo">
+
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="products.html"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium">Products</a>
+                    <a href="about.html"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium">About</a>
+                    <a href="gallery.html"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium">Gallery</a>
+                    <a href="about.html#contact"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium">Contact</a>
+                    <a href="about.html#contact"
+                        class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition-colors font-medium whitespace-nowrap">Get
+                        Quote
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary">
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="ri-menu-line ri-lg"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="products.html" class="block py-2 text-gray-700 hover:text-primary">Products</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="gallery.html" class="block py-2 text-gray-700 hover:text-primary">Gallery</a>
+                <a href="about.html#contact" class="block py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-16">
+        <!-- Banner Section -->
+        <section class="relative h-[400px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 w-full h-full">
+                <div class="w-full h-full bg-cover bg-center"
+                    style="background-image: url('https://readdy.ai/api/search-image?query=premium%20quality%20bricks%20arranged%20in%20professional%20display%20with%20dramatic%20lighting%2C%20architectural%20background%2C%20construction%20materials%20showcase%2C%20clean%20modern%20presentation%20with%20warm%20tones%2C%20professional%20product%20photography&width=1920&height=800&seq=product-banner&orientation=landscape')">
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            </div>
+            <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+                <h1 class="text-5xl md:text-6xl font-bold font-playfair mb-6">Roof Tiles</h1>
+                <p class="text-xl md:text-2xl font-light">Brick tiles for roofs made with clay are a great way to protect your construction from the overhead attack of the tropical seasons. </p>
+            </div>
+        </section>
+
+        <!-- Product Overview Tabs -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-wrap justify-center gap-2 mb-12">
+                    <button
+                        class="tab-btn px-6 py-3 rounded-button font-medium transition-colors whitespace-nowrap tab-active"
+                        data-tab="overview">Overview</button>
+                    <button
+                        class="tab-btn px-6 py-3 rounded-button font-medium transition-colors whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200"
+                        data-tab="uses">Where Can Be Roof Tile Used</button>
+                    <!-- <button
+                        class="tab-btn px-6 py-3 rounded-button font-medium transition-colors whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200"
+                        data-tab="specifications">Specifications</button> -->
+                    <button
+                        class="tab-btn px-6 py-3 rounded-button font-medium transition-colors whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200"
+                        data-tab="benefits">Benefits</button>
+                    <button
+                        class="tab-btn px-6 py-3 rounded-button font-medium transition-colors whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200"
+                        data-tab="advantages">Advantages</button>
+                    <button
+                        class="tab-btn px-6 py-3 rounded-button font-medium transition-colors whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200"
+                        data-tab="installation">Installation</button>
+
+                    <!-- <button
+                        class="tab-btn px-6 py-3 rounded-button font-medium transition-colors whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200"
+                        data-tab="gallery">Gallery</button>
+                    <button
+                        class="tab-btn px-6 py-3 rounded-button font-medium transition-colors whitespace-nowrap bg-gray-100 text-gray-700 hover:bg-gray-200"
+                        data-tab="resources">Resources</button> -->
+                </div>
+
+                <!-- Overview Tab -->
+                <div id="overview" class="tab-content">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                        <div>
+                            <h2 class="text-4xl font-bold text-gray-900 mb-6">Best Quality Clay Face Bricks</h2>
+                            <p class="text-lg text-gray-600 mb-6">
+                               With small pockets of air trapped inside, these clay roof tiles thermally insulate the house. Get these best roof tiles at affordable prices from the leading manufacturers of cool roof tiles, Lakhani Bricks, and buy what is best for your roof today.
+                            </p>
+                            <!-- <div class="space-y-4 mb-8">
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-6 h-6 flex items-center justify-center bg-green-100 rounded-full mr-4 mt-1">
+                                        <i class="ri-check-line text-green-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-1">Ultra-Fast Scanning</h3>
+                                        <p class="text-gray-600">Complete whole-body scans in under 10 seconds with
+                                            128-slice technology</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-6 h-6 flex items-center justify-center bg-green-100 rounded-full mr-4 mt-1">
+                                        <i class="ri-check-line text-green-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-1">AI-Powered Reconstruction</h3>
+                                        <p class="text-gray-600">Advanced algorithms reduce noise and enhance image
+                                            quality
+                                            by up to 40%</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-6 h-6 flex items-center justify-center bg-green-100 rounded-full mr-4 mt-1">
+                                        <i class="ri-check-line text-green-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-1">Dose Optimization</h3>
+                                        <p class="text-gray-600">Up to 60% radiation dose reduction while maintaining
+                                            diagnostic quality</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div>
+                            <img src="products-images/roof-tile.jpg" alt="CT Scanner Overview"
+                                class="w-full rounded-xl shadow-lg object-cover object-top">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Where Can Be Roof Tile Used Tab -->
+                <div id="uses" class="tab-content hidden">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Where Can Be Roof Tile Used</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="products-images/face-bricks/multi-hole-2-2.jpg" alt="Brain CT Imaging"
+                                class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Residential Buildings</h3>
+                                <p class="text-gray-600 mb-4">Roof tiles are commonly used in houses and residential structures for their aesthetic appeal and durability.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="products-images/face-bricks/8-hole-1.jpg" alt="Cardiac CT Imaging"
+                                class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Commercial Buildings</h3>
+                                <p class="text-gray-600 mb-4">Roof tiles find application in various commercial properties, adding an elegant touch and ensuring long-lasting protection.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="products-images/face-bricks/2-hole-brick-2.jpg" alt="Chest CT Imaging"
+                                class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Educational Institutions</h3>
+                                <p class="text-gray-600 mb-4">Roof tiles are used in schools and universities to create a facilitative learning environment while withstanding weather challenges.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="products-images/face-bricks/multi-hole-2-2.jpg" alt="Brain CT Imaging"
+                                class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Religious Buildings</h3>
+                                <p class="text-gray-600 mb-4">Roof tiles adorn many religious structures, providing a timeless and traditional appearance.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="products-images/face-bricks/8-hole-1.jpg" alt="Cardiac CT Imaging"
+                                class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Recreational Facilities</h3>
+                                <p class="text-gray-600 mb-4">Roof tiles are used in recreational buildings like community hubs and sports complexes, combining functionality with visual appeal</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="products-images/face-bricks/2-hole-brick-2.jpg" alt="Chest CT Imaging"
+                                class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Cultural Heritage Sites</h3>
+                                <p class="text-gray-600 mb-4">Many historical and cultural heritage sites use roof tiles to preserve their authenticity and architectural significance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits Tab -->
+                <div id="benefits" class="tab-content hidden">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Features and Benefits</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg border">
+                            <div class="w-16 h-16 flex items-center justify-center bg-red-100 rounded-lg mb-4">
+                                <i class="ri-home-2-line text-2xl text-red-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Thermal Insulation.
+                            </h3>
+                            <p class="text-gray-600 mb-4">Clay roof tiles are used for terraces. Holes in the roof tiles create air pockets that trap air and provide thermal insulation for the lower floor.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border">
+                            <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-lg mb-4">
+                                <i class="ri-magic-line text-2xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Weather Resistance</h3>
+                            <p class="text-gray-600 mb-4">Our roof tiles endure harsh weather conditions (rain, snow, hail, UV rays) without damage, ensuring long-lasting protection for the building’s structure.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border">
+                            <div class="w-16 h-16 flex items-center justify-center bg-green-100 rounded-lg mb-4">
+                                <i class="ri-sound-module-line text-2xl text-green-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Energy Efficiency</h3>
+                            <p class="text-gray-600 mb-4">Lakhani’s cool roof tiles have solar power to convert solar energy into electricity, lowering energy costs and the building’s environmental impact.
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border">
+                            <div class="w-16 h-16 flex items-center justify-center bg-purple-100 rounded-lg mb-4">
+                                <i class="ri-timer-line text-2xl text-purple-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Noise Reduction</h3>
+                            <p class="text-gray-600 mb-4">Our sound-absorbing roof tiles minimise external noise intrusion, creating a more peaceful and calm living environment inside the building.
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border">
+                            <div class="w-16 h-16 flex items-center justify-center bg-orange-100 rounded-lg mb-4">
+                                <i class="ri-arrow-down-long-fill text-2xl text-orange-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Fire Resistance</h3>
+                            <p class="text-gray-600 mb-4">Roof tiles made from fire-resistant materials prevent rapid flame spread, adding an extra layer of safety to the property during a fire outbreak.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border">
+                            <div class="w-16 h-16 flex items-center justify-center bg-indigo-100 rounded-lg mb-4">
+                                <i class="ri-color-filter-ai-line text-2xl text-indigo-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">wind resistance</h3>
+                            <p class="text-gray-600 mb-4">Roof tiles, particularly clay and concrete tiles, offer excellent wind resistance due to their weight and interlocking designs. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specifications Tab -->
+                <div id="specifications" class="tab-content hidden">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Technical Specifications</h2>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Parameter
+                                        </th>
+                                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                                            Specification
+                                        </th>
+                                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 font-medium text-gray-900">Detector Configuration</td>
+                                        <td class="px-6 py-4 text-gray-600">128 x 0.625 mm</td>
+                                        <td class="px-6 py-4 text-gray-600">Ultra-high resolution detector array</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-gray-900">Gantry Rotation Speed</td>
+                                        <td class="px-6 py-4 text-gray-600">0.28 - 2.0 seconds</td>
+                                        <td class="px-6 py-4 text-gray-600">Variable speed for optimal imaging</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 font-medium text-gray-900">Bore Diameter</td>
+                                        <td class="px-6 py-4 text-gray-600">78 cm</td>
+                                        <td class="px-6 py-4 text-gray-600">Wide bore for patient comfort</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-gray-900">Table Weight Capacity</td>
+                                        <td class="px-6 py-4 text-gray-600">227 kg (500 lbs)</td>
+                                        <td class="px-6 py-4 text-gray-600">Heavy-duty patient support</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 font-medium text-gray-900">Scan Speed</td>
+                                        <td class="px-6 py-4 text-gray-600">Up to 16 cm/sec</td>
+                                        <td class="px-6 py-4 text-gray-600">Ultra-fast coverage</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-gray-900">Reconstruction Time</td>
+                                        <td class="px-6 py-4 text-gray-600">
+                                            < 1 second</td>
+                                        <td class="px-6 py-4 text-gray-600">Real-time image processing</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 font-medium text-gray-900">kV Range</td>
+                                        <td class="px-6 py-4 text-gray-600">80, 100, 120, 140 kV</td>
+                                        <td class="px-6 py-4 text-gray-600">Flexible energy selection</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-gray-900">mAs Range</td>
+                                        <td class="px-6 py-4 text-gray-600">10 - 800 mAs</td>
+                                        <td class="px-6 py-4 text-gray-600">Wide dynamic range</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 font-medium text-gray-900">Spatial Resolution</td>
+                                        <td class="px-6 py-4 text-gray-600">0.33 mm</td>
+                                        <td class="px-6 py-4 text-gray-600">Exceptional detail visualization</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="px-6 py-4 font-medium text-gray-900">Contrast Resolution</td>
+                                        <td class="px-6 py-4 text-gray-600">2 mm @ 0.3%</td>
+                                        <td class="px-6 py-4 text-gray-600">Superior soft tissue contrast</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features Tab -->
+                <div id="advantages" class="tab-content hidden">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Advantages of Using Roof Tiles</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg border card-hover">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+                                <i class="ri-palette-line text-xl text-primary"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Excellent Thermal Insulation</h3>
+                            <p class="text-gray-600 mb-4">Roof tiles trap air, providing adequate thermal insulation for the lower floors.</p>
+
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border card-hover">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+                                <i class="ri-building-2-line text-xl text-primary"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Weather Resilience</h3>
+                            <p class="text-gray-600 mb-4">Roof tiles are highly durable and withstand harsh weather conditions.</p>
+
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border card-hover">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+                                <i class="ri-temp-cold-line text-xl text-primary"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Energy Efficiency</h3>
+                            <p class="text-gray-600 mb-4">Many roof tiles have solar power to convert solar energy into electricity, promoting energy efficiency.</p>
+
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border card-hover">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+                                <i class="ri-volume-mute-line text-xl text-primary"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Noise Reduction</h3>
+                            <p class="text-gray-600 mb-4">Sound-absorbing roof tiles minimise external noise intrusion, creating a quieter living environment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clinical Applications Tab -->
+                <div id="applications" class="tab-content hidden">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Clinical Applications</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="https://readdy.ai/api/search-image?query=CT%20scan%20image%20of%20human%20brain%20showing%20detailed%20neurological%20structures%2C%20medical%20imaging%20display%20on%20monitor%20screen%20in%20radiology%20department%2C%20high-resolution%20axial%20brain%20CT%20with%20clear%20anatomical%20details%20for%20neurological%20diagnosis&width=400&height=250&seq=brain-ct&orientation=landscape"
+                                alt="Brain CT Imaging" class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Neurological Imaging</h3>
+                                <p class="text-gray-600 mb-4">Advanced brain and spine imaging for stroke, trauma, and
+                                    neurological conditions with sub-millimeter resolution.</p>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Stroke assessment and perfusion studies</li>
+                                    <li>• Trauma evaluation and emergency imaging</li>
+                                    <li>• Tumor detection and characterization</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="https://readdy.ai/api/search-image?query=CT%20angiography%20image%20showing%20coronary%20arteries%20and%20heart%20structures%2C%20detailed%20cardiac%20imaging%20on%20medical%20monitor%20display%2C%20high-resolution%20cardiac%20CT%20scan%20with%20contrast%20enhancement%20showing%20blood%20vessels%20and%20cardiac%20anatomy&width=400&height=250&seq=cardiac-ct&orientation=landscape"
+                                alt="Cardiac CT Imaging" class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Cardiac Imaging</h3>
+                                <p class="text-gray-600 mb-4">Comprehensive cardiac assessment including coronary
+                                    angiography and functional analysis with ECG synchronization.</p>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Coronary artery disease evaluation</li>
+                                    <li>• Cardiac function assessment</li>
+                                    <li>• Calcium scoring and risk stratification</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="https://readdy.ai/api/search-image?query=CT%20scan%20of%20human%20chest%20showing%20lung%20structures%20and%20respiratory%20system%2C%20detailed%20pulmonary%20imaging%20on%20radiology%20workstation%20monitor%2C%20high-resolution%20thoracic%20CT%20with%20clear%20lung%20parenchyma%20and%20airways%20visualization&width=400&height=250&seq=chest-ct&orientation=landscape"
+                                alt="Chest CT Imaging" class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Thoracic Imaging</h3>
+                                <p class="text-gray-600 mb-4">High-resolution chest imaging for pulmonary conditions,
+                                    lung
+                                    cancer screening, and thoracic pathology assessment.</p>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Lung cancer screening and detection</li>
+                                    <li>• Pulmonary embolism evaluation</li>
+                                    <li>• Interstitial lung disease assessment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="https://readdy.ai/api/search-image?query=Abdominal%20CT%20scan%20showing%20internal%20organs%20including%20liver%20kidneys%20and%20digestive%20system%2C%20detailed%20medical%20imaging%20on%20diagnostic%20monitor%2C%20high-resolution%20abdominal%20CT%20with%20contrast%20enhancement%20showing%20anatomical%20structures&width=400&height=250&seq=abdomen-ct&orientation=landscape"
+                                alt="Abdominal CT Imaging" class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Abdominal Imaging</h3>
+                                <p class="text-gray-600 mb-4">Comprehensive abdominal and pelvic imaging for oncology,
+                                    gastroenterology, and emergency applications.</p>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Oncology staging and follow-up</li>
+                                    <li>• Acute abdomen evaluation</li>
+                                    <li>• Hepatobiliary and pancreatic assessment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="https://readdy.ai/api/search-image?query=CT%20scan%20of%20human%20spine%20showing%20vertebral%20structures%20and%20spinal%20cord%2C%20detailed%20orthopedic%20imaging%20on%20medical%20workstation%20display%2C%20high-resolution%20spinal%20CT%20with%20bone%20and%20soft%20tissue%20visualization&width=400&height=250&seq=spine-ct&orientation=landscape"
+                                alt="Spine CT Imaging" class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Musculoskeletal Imaging</h3>
+                                <p class="text-gray-600 mb-4">Advanced orthopedic imaging for trauma, degenerative
+                                    conditions, and surgical planning with 3D reconstruction.</p>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Trauma and fracture assessment</li>
+                                    <li>• Spine and joint evaluation</li>
+                                    <li>• 3D surgical planning and navigation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="https://readdy.ai/api/search-image?query=Pediatric%20CT%20imaging%20setup%20in%20childrens%20hospital%20radiology%20department%2C%20child-friendly%20medical%20environment%20with%20colorful%20decorations%2C%20specialized%20pediatric%20CT%20scanner%20with%20low%20radiation%20dose%20technology%20and%20comfort%20features&width=400&height=250&seq=pediatric-ct&orientation=landscape"
+                                alt="Pediatric CT Imaging" class="w-full h-48 object-cover object-top">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Pediatric Imaging</h3>
+                                <p class="text-gray-600 mb-4">Specialized pediatric protocols with ultra-low dose
+                                    techniques
+                                    and child-friendly features for young patients.</p>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Ultra-low dose pediatric protocols</li>
+                                    <li>• Size-specific dose optimization</li>
+                                    <li>• Child-friendly environment features</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Tab -->
+                <div id="gallery" class="tab-content hidden">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Image Gallery</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="gallery-item rounded-xl overflow-hidden shadow-lg"
+                            data-image="https://readdy.ai/api/search-image?query=Advanced%20CT%20scanner%20front%20view%20in%20modern%20hospital%20radiology%20room%2C%20white%20medical%20equipment%20with%20blue%20LED%20lighting%2C%20clean%20sterile%20environment%20with%20patient%20table%20in%20scanning%20position%2C%20professional%20healthcare%20facility&width=800&height=600&seq=ct-front&orientation=landscape">
+                            <img src="https://readdy.ai/api/search-image?query=Advanced%20CT%20scanner%20front%20view%20in%20modern%20hospital%20radiology%20room%2C%20white%20medical%20equipment%20with%20blue%20LED%20lighting%2C%20clean%20sterile%20environment%20with%20patient%20table%20in%20scanning%20position%2C%20professional%20healthcare%20facility&width=400&height=300&seq=ct-front&orientation=landscape"
+                                alt="CT Scanner Front View" class="w-full h-48 object-cover object-top">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900">Scanner Front View</h3>
+                                <p class="text-sm text-gray-600">Complete system overview</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item rounded-xl overflow-hidden shadow-lg"
+                            data-image="https://readdy.ai/api/search-image?query=CT%20scanner%20control%20room%20with%20multiple%20monitors%20and%20operator%20workstation%2C%20modern%20radiology%20control%20center%20with%20glass%20partition%20viewing%20scanner%20room%2C%20professional%20medical%20imaging%20workspace%20with%20advanced%20computer%20systems&width=800&height=600&seq=ct-control&orientation=landscape">
+                            <img src="https://readdy.ai/api/search-image?query=CT%20scanner%20control%20room%20with%20multiple%20monitors%20and%20operator%20workstation%2C%20modern%20radiology%20control%20center%20with%20glass%20partition%20viewing%20scanner%20room%2C%20professional%20medical%20imaging%20workspace%20with%20advanced%20computer%20systems&width=400&height=300&seq=ct-control&orientation=landscape"
+                                alt="Control Room" class="w-full h-48 object-cover object-top">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900">Control Room</h3>
+                                <p class="text-sm text-gray-600">Advanced operator workstation</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item rounded-xl overflow-hidden shadow-lg"
+                            data-image="https://readdy.ai/api/search-image?query=CT%20scanner%20patient%20table%20and%20gantry%20detail%20showing%20wide%20bore%20opening%2C%20comfortable%20patient%20positioning%20system%20with%20motorized%20table%2C%20modern%20medical%20equipment%20design%20with%20ergonomic%20features%20and%20safety%20systems&width=800&height=600&seq=ct-table&orientation=landscape">
+                            <img src="https://readdy.ai/api/search-image?query=CT%20scanner%20patient%20table%20and%20gantry%20detail%20showing%20wide%20bore%20opening%2C%20comfortable%20patient%20positioning%20system%20with%20motorized%20table%2C%20modern%20medical%20equipment%20design%20with%20ergonomic%20features%20and%20safety%20systems&width=400&height=300&seq=ct-table&orientation=landscape"
+                                alt="Patient Table" class="w-full h-48 object-cover object-top">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900">Patient Table System</h3>
+                                <p class="text-sm text-gray-600">Ergonomic patient positioning</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item rounded-xl overflow-hidden shadow-lg"
+                            data-image="https://readdy.ai/api/search-image?query=Hospital%20installation%20of%20CT%20scanner%20showing%20complete%20radiology%20suite%20setup%2C%20professional%20medical%20facility%20with%20lead-lined%20walls%20and%20radiation%20shielding%2C%20modern%20healthcare%20infrastructure%20with%20proper%20ventilation%20and%20safety%20systems&width=800&height=600&seq=ct-install&orientation=landscape">
+                            <img src="https://readdy.ai/api/search-image?query=Hospital%20installation%20of%20CT%20scanner%20showing%20complete%20radiology%20suite%20setup%2C%20professional%20medical%20facility%20with%20lead-lined%20walls%20and%20radiation%20shielding%2C%20modern%20healthcare%20infrastructure%20with%20proper%20ventilation%20and%20safety%20systems&width=400&height=300&seq=ct-install&orientation=landscape"
+                                alt="Installation View" class="w-full h-48 object-cover object-top">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900">Installation Example</h3>
+                                <p class="text-sm text-gray-600">Complete facility setup</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item rounded-xl overflow-hidden shadow-lg"
+                            data-image="https://readdy.ai/api/search-image?query=Medical%20technologist%20operating%20CT%20scanner%20with%20patient%20preparation%2C%20professional%20healthcare%20worker%20in%20radiology%20department%20demonstrating%20proper%20scanning%20procedure%2C%20clinical%20workflow%20and%20patient%20care%20in%20modern%20medical%20facility&width=800&height=600&seq=ct-operation&orientation=landscape">
+                            <img src="https://readdy.ai/api/search-image?query=Medical%20technologist%20operating%20CT%20scanner%20with%20patient%20preparation%2C%20professional%20healthcare%20worker%20in%20radiology%20department%20demonstrating%20proper%20scanning%20procedure%2C%20clinical%20workflow%20and%20patient%20care%20in%20modern%20medical%20facility&width=400&height=300&seq=ct-operation&orientation=landscape"
+                                alt="Clinical Operation" class="w-full h-48 object-cover object-top">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900">Clinical Operation</h3>
+                                <p class="text-sm text-gray-600">Professional workflow</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item rounded-xl overflow-hidden shadow-lg"
+                            data-image="https://readdy.ai/api/search-image?query=CT%20scanner%20software%20interface%20on%20multiple%20monitors%20showing%20medical%20imaging%20workstation%2C%20advanced%20radiology%20software%20with%20image%20reconstruction%20and%20analysis%20tools%2C%20professional%20medical%20imaging%20technology%20display&width=800&height=600&seq=ct-software&orientation=landscape">
+                            <img src="https://readdy.ai/api/search-image?query=CT%20scanner%20software%20interface%20on%20multiple%20monitors%20showing%20medical%20imaging%20workstation%2C%20advanced%20radiology%20software%20with%20image%20reconstruction%20and%20analysis%20tools%2C%20professional%20medical%20imaging%20technology%20display&width=400&height=300&seq=ct-software&orientation=landscape"
+                                alt="Software Interface" class="w-full h-48 object-cover object-top">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900">Software Interface</h3>
+                                <p class="text-sm text-gray-600">Advanced imaging software</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resources Tab -->
+                <div id="resources" class="tab-content hidden">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Resources & Downloads</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg border">
+                            <div class="w-16 h-16 flex items-center justify-center bg-red-100 rounded-lg mb-4">
+                                <i class="ri-file-pdf-line text-2xl text-red-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Product Brochure</h3>
+                            <p class="text-gray-600 mb-4">Comprehensive overview of CT system features, specifications,
+                                and
+                                clinical applications.</p>
+                            <div class="text-sm text-gray-500 mb-4">PDF • 2.4 MB</div>
+                            <button
+                                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Download</button>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border">
+                            <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-lg mb-4">
+                                <i class="ri-file-text-line text-2xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Technical Datasheet</h3>
+                            <p class="text-gray-600 mb-4">Detailed technical specifications, performance data, and
+                                system
+                                requirements.</p>
+                            <div class="text-sm text-gray-500 mb-4">PDF • 1.8 MB</div>
+                            <button
+                                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Download</button>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border">
+                            <div class="w-16 h-16 flex items-center justify-center bg-green-100 rounded-lg mb-4">
+                                <i class="ri-heart-pulse-line text-2xl text-green-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Clinical Case Studies</h3>
+                            <p class="text-gray-600 mb-4">Real-world clinical cases demonstrating diagnostic
+                                capabilities
+                                and patient outcomes.</p>
+                            <div class="text-sm text-gray-500 mb-4">PDF • 5.2 MB</div>
+                            <button
+                                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Download</button>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border">
+                            <div class="w-16 h-16 flex items-center justify-center bg-purple-100 rounded-lg mb-4">
+                                <i class="ri-book-line text-2xl text-purple-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">White Paper: AI Reconstruction</h3>
+                            <p class="text-gray-600 mb-4">In-depth analysis of AI-powered image reconstruction
+                                technology
+                                and clinical benefits.</p>
+                            <div class="text-sm text-gray-500 mb-4">PDF • 3.1 MB</div>
+                            <button
+                                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Download</button>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border">
+                            <div class="w-16 h-16 flex items-center justify-center bg-orange-100 rounded-lg mb-4">
+                                <i class="ri-tools-line text-2xl text-orange-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Installation Guide</h3>
+                            <p class="text-gray-600 mb-4">Complete installation requirements, site preparation, and
+                                commissioning procedures.</p>
+                            <div class="text-sm text-gray-500 mb-4">PDF • 4.7 MB</div>
+                            <button
+                                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Download</button>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border">
+                            <div class="w-16 h-16 flex items-center justify-center bg-indigo-100 rounded-lg mb-4">
+                                <i class="ri-graduation-cap-line text-2xl text-indigo-600"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3">Training Materials</h3>
+                            <p class="text-gray-600 mb-4">Comprehensive training resources for operators and service
+                                technicians.</p>
+                            <div class="text-sm text-gray-500 mb-4">PDF • 8.3 MB</div>
+                            <button
+                                class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Installtion Tab -->
+                <div id="installation" class="tab-content hidden">
+                    <div class="flex items-center justify-center w-25">
+                        <img class="w-full md:max-w-4xl" src="products-images/installtion/roof-tiles-installation.png"
+                            alt="Tips for Proper Installation of Pavers" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Chart -->
+        <!-- <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Model Comparison</h2>
+                <p class="text-lg text-gray-600">Compare our CT systems to find the perfect solution for your facility
+                </p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden comparison-table">
+                <table class="w-full">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th class="px-6 py-4 text-left">Feature</th>
+                            <th class="px-6 py-4 text-center">CT-128 Pro</th>
+                            <th class="px-6 py-4 text-center">CT-64 Advanced</th>
+                            <th class="px-6 py-4 text-center">CT-32 Essential</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-gray-900">Detector Slices</td>
+                            <td class="px-6 py-4 text-center text-green-600 font-semibold">128</td>
+                            <td class="px-6 py-4 text-center">64</td>
+                            <td class="px-6 py-4 text-center">32</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="px-6 py-4 font-medium text-gray-900">Gantry Speed (min)</td>
+                            <td class="px-6 py-4 text-center text-green-600 font-semibold">0.28s</td>
+                            <td class="px-6 py-4 text-center">0.35s</td>
+                            <td class="px-6 py-4 text-center">0.5s</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-gray-900">AI Reconstruction</td>
+                            <td class="px-6 py-4 text-center text-green-600">
+                                <div class="w-6 h-6 flex items-center justify-center mx-auto">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center text-green-600">
+                                <div class="w-6 h-6 flex items-center justify-center mx-auto">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center text-red-500">
+                                <div class="w-6 h-6 flex items-center justify-center mx-auto">
+                                    <i class="ri-close-line"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="px-6 py-4 font-medium text-gray-900">Dual Energy</td>
+                            <td class="px-6 py-4 text-center text-green-600">
+                                <div class="w-6 h-6 flex items-center justify-center mx-auto">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center text-yellow-500">Optional</td>
+                            <td class="px-6 py-4 text-center text-red-500">
+                                <div class="w-6 h-6 flex items-center justify-center mx-auto">
+                                    <i class="ri-close-line"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-gray-900">Cardiac Imaging</td>
+                            <td class="px-6 py-4 text-center text-green-600">
+                                <div class="w-6 h-6 flex items-center justify-center mx-auto">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center text-green-600">
+                                <div class="w-6 h-6 flex items-center justify-center mx-auto">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center text-yellow-500">Basic</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="px-6 py-4 font-medium text-gray-900">Starting Price</td>
+                            <td class="px-6 py-4 text-center font-semibold">$2.8M</td>
+                            <td class="px-6 py-4 text-center font-semibold">$1.9M</td>
+                            <td class="px-6 py-4 text-center font-semibold">$1.2M</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section> -->
+
+        <!-- Contact Form -->
+        <section class="py-20 bg-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Request Demo or Quote</h2>
+                    <p class="text-lg text-gray-600">Get personalized information about our CT imaging systems</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                <input type="text" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-button focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="John">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                <input type="text" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-button focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="Doe">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                <input type="email" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-button focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="john.doe@hospital.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                                <input type="tel"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-button focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="+1 (555) 123-4567">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Hospital/Institution *</label>
+                            <input type="text" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-button focus:ring-2 focus:ring-primary focus:border-transparent"
+                                placeholder="General Hospital">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Contact Method</label>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="contact-method" value="email" class="hidden">
+                                    <div
+                                        class="w-5 h-5 border-2 border-gray-300 rounded-full mr-2 flex items-center justify-center cursor-pointer radio-custom">
+                                        <div class="w-2 h-2 bg-primary rounded-full hidden"></div>
+                                    </div>
+                                    <span class="text-gray-700">Email</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="contact-method" value="phone" class="hidden">
+                                    <div
+                                        class="w-5 h-5 border-2 border-gray-300 rounded-full mr-2 flex items-center justify-center cursor-pointer radio-custom">
+                                        <div class="w-2 h-2 bg-primary rounded-full hidden"></div>
+                                    </div>
+                                    <span class="text-gray-700">Phone</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="contact-method" value="both" class="hidden">
+                                    <div
+                                        class="w-5 h-5 border-2 border-gray-300 rounded-full mr-2 flex items-center justify-center cursor-pointer radio-custom">
+                                        <div class="w-2 h-2 bg-primary rounded-full hidden"></div>
+                                    </div>
+                                    <span class="text-gray-700">Both</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-button focus:ring-2 focus:ring-primary focus:border-transparent"
+                                placeholder="Please provide details about your requirements, timeline, and any specific questions..."></textarea>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button type="submit"
+                                class="flex-1 bg-primary text-white py-3 rounded-button font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap">Schedule
+                                Demo</button>
+                            <button type="button"
+                                class="flex-1 border-2 border-primary text-primary py-3 rounded-button font-semibold hover:bg-primary hover:text-white transition-colors whitespace-nowrap">Request
+                                Quote</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold font-playfair text-primary mb-4">Lakhani Brick Store</h3>
+                    <p class="text-gray-300 mb-6">Building dreams with premium quality bricks and construction materials
+                        for over three decades.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold font-montserrat mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#products" class="text-gray-300 hover:text-primary transition-colors">Products</a>
+                        </li>
+                        <li><a href="#about" class="text-gray-300 hover:text-primary transition-colors">About Us</a>
+                        </li>
+                        <li><a href="#gallery" class="text-gray-300 hover:text-primary transition-colors">Gallery</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-primary transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold font-montserrat mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Extruded Bricks</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Pressed Bricks</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Cladding Tiles</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Pavers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Custom Solutions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold font-montserrat mb-4">Contact Info</h4>
+                    <div class="space-y-3">
+                        <p class="text-gray-300 flex items-center">
+                        <div class="w-5 h-5 flex items-center justify-center mr-3">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+                        123 Brick Lane, Mumbai
+                        </p>
+                        <p class="text-gray-300 flex items-center">
+                        <div class="w-5 h-5 flex items-center justify-center mr-3">
+                            <i class="ri-phone-line"></i>
+                        </div>
+                        +91 98765 43210
+                        </p>
+                        <p class="text-gray-300 flex items-center">
+                        <div class="w-5 h-5 flex items-center justify-center mr-3">
+                            <i class="ri-mail-line"></i>
+                        </div>
+                        info@lakhanibricks.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2024 Lakhani Brick Store. All rights reserved. | Designed with passion
+                    for quality construction.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210"
+        class="floating-whatsapp bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors">
+        <div class="w-8 h-8 flex items-center justify-center">
+            <i class="ri-whatsapp-fill ri-xl"></i>
+        </div>
+    </a>
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-20 right-4 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-secondary transition-colors opacity-0 pointer-events-none">
+        <div class="w-6 h-6 flex items-center justify-center">
+            <i class="ri-arrow-up-line"></i>
+        </div>
+    </button>
+
+
+    <script id="tab-functionality">
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const targetTab = this.getAttribute('data-tab');
+
+                    tabBtns.forEach(b => {
+                        b.classList.remove('tab-active');
+                        b.classList.add('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
+                    });
+
+                    this.classList.add('tab-active');
+                    this.classList.remove('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
+
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+
+                    document.getElementById(targetTab).classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+
+    <script id="gallery-functionality">
+        document.addEventListener('DOMContentLoaded', function () {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxClose = document.getElementById('lightbox-close');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    const imageSrc = this.getAttribute('data-image');
+                    lightboxImg.src = imageSrc;
+                    lightbox.classList.add('active');
+                });
+            });
+
+            lightboxClose.addEventListener('click', function () {
+                lightbox.classList.remove('active');
+            });
+
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    <script id="form-functionality">
+        document.addEventListener('DOMContentLoaded', function () {
+            const radioInputs = document.querySelectorAll('input[type="radio"]');
+            const radioCustoms = document.querySelectorAll('.radio-custom');
+
+            radioInputs.forEach((input, index) => {
+                input.addEventListener('change', function () {
+                    radioCustoms.forEach(custom => {
+                        custom.querySelector('div').classList.add('hidden');
+                        custom.classList.remove('border-primary');
+                        custom.classList.add('border-gray-300');
+                    });
+
+                    if (this.checked) {
+                        radioCustoms[index].querySelector('div').classList.remove('hidden');
+                        radioCustoms[index].classList.add('border-primary');
+                        radioCustoms[index].classList.remove('border-gray-300');
+                    }
+                });
+            });
+
+            radioCustoms.forEach((custom, index) => {
+                custom.addEventListener('click', function () {
+                    radioInputs[index].checked = true;
+                    radioInputs[index].dispatchEvent(new Event('change'));
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
